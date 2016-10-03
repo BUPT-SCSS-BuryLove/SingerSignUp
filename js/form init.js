@@ -7,6 +7,7 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
+
 $("#application").submit(function(e) {
 
     var url = "backend/DataHandler.php"; // the script where you handle the form input.
@@ -17,7 +18,7 @@ $("#application").submit(function(e) {
         data: $("#application").serialize(), // serializes the form's elements.
         success: function(data)
         {
-            Materialize.toast(data, 6000);
+            Materialize.toast("提交成功~", 6000);
         }
     });
     e.preventDefault(); // avoid to execute the actual submit of the form.
