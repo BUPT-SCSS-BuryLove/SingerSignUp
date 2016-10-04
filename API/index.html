@@ -1,0 +1,24 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script src="jquery-1.11.2.min.js"></script>
+        <script>
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "signin.php",
+                data: {
+                    "studentID":"2015211556",
+                    "pwd":"asdfasdfdsf"
+                },
+                success: function(data){
+                    alert(data.result);
+                },
+                error: function(e){
+                    console.log(e.message);
+                }
+            });
+        </script>
+    </body>
+</html>
