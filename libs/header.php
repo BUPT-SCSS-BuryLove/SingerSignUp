@@ -1,15 +1,15 @@
   
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="index.php" class="brand-logo">三笙有杏</a>
+      <a id="logo-container" href="#" class="brand-logo">三笙有杏</a>
       <ul class="right hide-on-med-and-down">
-		<li><a href="index.php">首页</a></li>
-        <li><a target="_blank" href="notice.php">报名须知</a></li>
+        <li><a href="index.php">首页</a></li>
+		<li><a target="_blank" href="notice.php">报名须知</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-		<li><a href="index.php">首页</a></li>
-        <li><a target="_blank" href="notice.php">报名须知</a></li>
+        <li><a href="index.php">首页</a></li>
+		<li><a target="_blank" href="notice.php">报名须知</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -25,8 +25,8 @@
         </div>
         <div class="row center">
           <a href="sign_up.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><i class="material-icons left">cloud</i>我要报名</a>
-		  <a href="modify.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><i class="material-icons left">cloud</i>修改报名信息</a>
-        </div>
+          <a href="modify.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><i class="material-icons left">cloud</i>修改报名信息</a>
+	   </div>
         <br><br>
 
       </div>

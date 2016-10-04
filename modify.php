@@ -144,8 +144,7 @@
                                 <div class="col s12">
                                     <div class="row">
 										<div class="input-field col s12">
-											<span>想要清唱的宝宝直接无视这里好了ㄟ(◑‿◐ )ㄏ</span><br>
-											<span>现在还没有定下曲目的宝宝，别急别急⊙ω⊙~报名资料以后还可以再修改哦●ω●</span>
+											<span>在这里上传音频或修改音频哦●ω●~</span><br>
 											<br><br>
 										</div>
 										<div class="input-field col s12">
@@ -165,7 +164,7 @@
 											</div>
 											<div class="center">
 												<button id="submit_file" class="btn waves-effect waves-light tooltipped" 
-													data-position="bottom" data-delay="50" data-tooltip="上传成功后进度条会消失哦~︶ε╰✿ " type="submit">上传
+													data-position="bottom" data-delay="50" data-tooltip="上传成功后进度条会消失哦~︶ε╰︶" type="submit">上传
 														<i class="material-icons right">cloud</i>
 												</button>
 											</div>
@@ -176,34 +175,11 @@
                         </div>
                     </div>
                 </li>
-                <li>
-					<div class="collapsible-header"><i class="material-icons">settings</i>设置口令</div>
-					<div class="collapsible-body">
-                        <div class="container in-collapsible">
-                            <div class="row">
-                                <div class="col s12">
-                                    <div class="row"><br>
-										<div class="input-field col s12 m6">
-											口令有什么作用呢？<br><br>
-											当你的报名信息（伴奏、参赛曲目等）需要修改时，需要用到这个口令进行身份验证哦●ω●~<br>
-											本次填写的信息已确认无误的宝宝就可以不用填写此口令啦●ω●~
-										</div>
-										<div class="input-field col s12 m6"><br><br>
-											<i class="material-icons prefix">lock</i>
-                                            <input id="password" name="password" placeholder="口令一定要牢记哦●ω●~" type="text">
-                                            <label for="password">口令</label>
-										</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
                 
             </ul>
             <div class="center">
                 <button id="submit_btn" class="btn waves-effect waves-light tooltipped"
-                        data-position="bottom" data-delay="50" data-tooltip="(灬ºωº灬)又有可爱的宝宝来报名辣好开森~︶ε╰✿ " type="submit">提交
+                        data-position="bottom" data-delay="50" data-tooltip="(灬oωo灬)确认一遍~再确认一遍~︶ε╰︶ " type="submit">提交
                     <i class="material-icons right">send</i>
                 </button>
             </div>
@@ -218,7 +194,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/form init.js"></script>
+  <script src="js/modify.js"></script>
 
   </body>
 </html>
