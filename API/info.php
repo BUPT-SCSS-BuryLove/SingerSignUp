@@ -14,6 +14,13 @@
         die();
     }
 
+    if ($_SERVER['REQUEST_METHOD']=="GET") {
+        foreach($dbh->query("SELECT * FROM SingerInfo WHERE studentID = {$_SESSION['studentID']}", PDO::FETCH_NAMED) as $result) {
+            print(json_encode($result, JSON_UNESCAPED_UNICODE));
+        }
+        die();
+    }
+
     try {
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $dbh->beginTransaction();
