@@ -7,10 +7,10 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "signin.php",
+                url: "post.php",
                 data: {
                     "studentID":"2015211555",
-                    "pwd":""
+                    "pwd":"1234"
                 },
                 success: function(data){
                     alert(data.result);
