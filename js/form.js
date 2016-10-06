@@ -6,7 +6,7 @@ $(document).ready(function(){
 			type:"POST",
 			url:"API/signIn.php",
 			dataType:"json",
-			data:{ studentID:$('#buptid').val() },
+			data:{ "studentID": $('#buptid').val() },
 			success:function(data){
 				if(data.result == "NewUser"){
 					Materialize.toast("注册成功！", 6000);
