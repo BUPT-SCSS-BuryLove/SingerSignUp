@@ -58,11 +58,7 @@ $(document).ready(function(){
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
                 alert("XMLHttpRequest " + XMLHttpRequest[0]);
-<<<<<<< HEAD
 			}
-=======
-			},
->>>>>>> master
 		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
@@ -90,156 +86,84 @@ $(document).ready(function(){
 		var sub = new Object;
 		sub.college_class = $("#class").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				college_class:$("#class").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#campus').change(function(){
 		var sub = new Object;
 		sub.campus = $("#campus").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				campus:$("#campus").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#school').change(function(){
 		var sub = new Object;
 		sub.school = $("#school").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				school:$("#school").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#name').change(function(){
 		var sub = new Object;
 		sub.name = $("#name").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				name:$("#name").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#gender').change(function(){
 		var sub = new Object;
 		sub.gender = $("#gender").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				gender:$("#gender").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#contact').change(function(){
 		var sub = new Object;
 		sub.contact = $("#contact").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				contact:$("#contact").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#song').change(function(){
 		var sub = new Object;
 		sub.title = $("#song").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				title:$("#song").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#way').change(function(){
 		var sub = new Object;
 		sub.noMusic = $("#way").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				noMusic:$("#way").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$("input[name='single_or_group']").change(function(){
 		var sub = new Object;
 		sub.type = $("input[name='single_or_group'][checked]").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				type:$("input[name='single_or_group']:checked").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#team_name').change(function(){
 		var sub = new Object;
 		sub.teamName = $("#team_name").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				teamName:$("#team_name").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#number').change(function(){
 		var sub = new Object;
 		sub.teamPeople = $("#number").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				teamPeople:$("#number").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	$('#others').change(function(){
 		var sub = new Object;
 		sub.teamInfo = $("#others").val();
 		$.ajax({
-<<<<<<< HEAD
-			data:{ 
-				teamInfo:$("#others").val()
-			},
-=======
-			data:sub,
->>>>>>> master
+			data:sub
 		});
 	});
 	
