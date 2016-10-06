@@ -17,9 +17,17 @@
   
   <br><br><br>
  
-	
+        <div id="you-are-in" class="modal">
+            <div class="modal-content">
+            <p>你已经注册了</p>
+            </div>
+            <div class="modal-footer">
+            <a href="modify.php" class=" modal-action modal-close waves-effect waves-teal btn-flat">查看报名信息</a>
+            </div>
+        </div>
+
         <div class="container">
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible popout" data-collapsible="accordion">
 				<li>	
                     <div class="collapsible-header"><i class="material-icons">account_box</i>个人信息</div>
                     <div class="collapsible-body">
@@ -27,17 +35,12 @@
                             <div class="row">
                                 <div class="col s12">
                                     <div class="row"><br>
-										<div class="input-field col s8 m4">
+										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">perm_identity</i>
                                             <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" 
 											id="buptid" name="buptid" type="text" >
                                             <label for="buptid">学号</label>
                                         </div>
-										<div class="input-field col s4 m2">
-											<button id="confirm_id" class="btn waves-effect waves-light tooltipped" 
-												data-position="bottom" data-delay="50" data-tooltip="点我之后学号就不能修改了哦~︶ε╰✿ " type="submit">确定
-											</button>
-										</div>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">class</i>
                                             <input id="class" name="class" type="text">
@@ -133,13 +136,13 @@
 								</div>
 								<div class="row">
                                     <div class="input-field col s12">
-										  <input class="with-gap" name="single_or_group" type="radio" id="app_for_single" value="single" />
+										  <input name="single_or_group" type="radio" id="app_for_single" value="single" />
 										  <label for="app_for_single">个人参赛</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                          <input class="with-gap" name="single_or_group" type="radio" id="app_for_group" value="team" />
+                                          <input name="single_or_group" type="radio" id="app_for_group" value="team" />
 										  <label for="app_for_group">组队参赛</label><br><br><br>
                                     </div>
                                     <div id="group_pos"><br><br><br>
@@ -176,7 +179,7 @@
     </div><br>
 	<form enctype="multipart/form-data" id="file" action="API/file.php" method="POST">
         <div class="container">
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible popout" data-collapsible="accordion">
 				<li>
                     <div class="collapsible-header"><i class="material-icons">radio</i>上传伴奏</div>
                     <div class="collapsible-body">

@@ -12,28 +12,26 @@
   </div>
 
   <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">最后的故事，你还在听吗？</h5>
-		  <h6><p class="grey-text text-lighten-4">水色风影皆有诗情言语，小楼巷陌亦是含蓄婉转。<br>三笙有杏，遇到最美的你。</p></h6>
-        </div>
-        <div class="col l3 s12">
-		</div>
-        <div class="col l3 s12">
-		  <br>
-          <h6 class="white-text">联系我们</h6>
-          <ul>
-            <li><a class="white-text" href="mailto:linkin@zuos.tk">Linkin:   linkin@zuos.tk</a></li>
-			<li><a class="white-text" href="mailto:shzhaotc@gmail.com">Henryzhao:   shzhaotc#gmail.com</a></li>
-			<li><a class="white-text" href="mailto:carol_zhao@aliyun.com">Carol:   carol_zhao@aliyun.com</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
       <div class="container">
-      Made by <a target="_blank" class="brown-text text-lighten-3" href="http://scss.bupt.edu.cn/"> <b>SCSS_BuryLove</b> </a>
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5 class="white-text">最后的故事，你还在听吗？</h5>
+                  <h6><p class="grey-text text-lighten-4">水色风影皆有诗情言语，小楼巷陌亦是含蓄婉转。<br>三笙有杏，遇到最美的你。</p></h6>
+              </div>
+              <div class="col l3 offset-l3 s12">
+                  <br>
+                  <h6 class="white-text">联系我们</h6>
+                  <ul>
+                      <li><a class="white-text" href="mailto:linkin@zuos.tk">Linkin<br><span style="font-size:80%">linkin@zuos.tk</span></a></li>
+                      <li><a class="white-text" href="mailto:shzhaotc@gmail.com">Henryzhao<br><span style="font-size:80%">shzhaotc@gmail.com</span></a></li>
+                      <li><a class="white-text" href="mailto:carol_zhao@aliyun.com">Carol<br><span style="font-size:80%">carol_zhao@aliyun.com</span></a></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
+      <div class="footer-copyright">
+          <div class="container">
+              Made by <a target="_blank" class="brown-text text-lighten-3" href="http://scss.bupt.edu.cn/"> <b>SCSS_BuryLove</b> </a>
+          </div>
+      </div>
   </footer>

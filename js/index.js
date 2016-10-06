@@ -13,6 +13,16 @@ $(document).ready(function(){
 	$('#single_pos').slideUp();
 	$('#group_pos').slideUp();
 	$('#modify').slideUp();
+  $.ajax({
+			type:"POST",
+			url:"API/signIn.php",
+			dataType:"json",
+			data:{},
+			success:function(data){
+			},
+			error: function (XMLHttpRequest, textStatus, errorThrown){
+			}
+		});
 });
 	
 	
