@@ -2,6 +2,7 @@
     include_once('config.php');
     //session_set_cookie_params(0, true, true);
     session_start();
+
     if (!isset($_SESSION['studentID'])) {
         print('Forbidden');
         die();
@@ -11,8 +12,18 @@
         print('Forbidden');
         die();
     }
+    if (!isset($_FILES['userfile']['type'])) {
+        print('No File Type');
+        die();
+    }
+    if (strpos($_FILES['userfile']['type'], 'audio')===false) {
+        print("Wrong Type\n");
+        print($_FILES['userfile']['type']);
+        die();
+    }
     $fileBasename = basename($_FILES['userfile']['name']);
     $filename = '../FILE/'.$fileBasename;
+
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $filename)) {
     } else {
         print('Failed');
