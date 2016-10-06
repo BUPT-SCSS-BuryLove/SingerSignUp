@@ -1,26 +1,27 @@
 
 $(document).ready(function(){
 	
-	$('#confirm_id').click(function(e){//注册
+	$('#buptid').change(function(){//注册
 		$.ajax({
 			type:"POST",
 			url:"API/signIn.php",
 			dataType:"json",
-			data:{ "studentID": $('#buptid').val() },
+			data:{
+				"studentID": $('#buptid').val(),
+				"pwd":""
+			},
 			success:function(data){
 				if(data.result == "NewUser"){
-					Materialize.toast("注册成功！", 6000);
+					//Materialize.toast("注册成功！", 6000);
 				}
 				else {
-					Materialize.toast("您已经注册过了哦！", 6000);
-					setTimeout("window.location.href = 'modify.php'",6000);  
+					$("#you-are-in").openModal();
 				}
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
-                alert("XMLHttpRequest " + XMLHttpRequest[0]);
+                alert("请联系我们	XMLHttpRequest " + XMLHttpRequest[0]);
 			}
 		});
-		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
 

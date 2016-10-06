@@ -17,7 +17,15 @@
   
   <br><br><br>
  
-	
+        <div id="you-are-in" class="modal">
+            <div class="modal-content">
+            <p>你已经注册了</p>
+            </div>
+            <div class="modal-footer">
+            <a href="modify.php" class=" modal-action modal-close waves-effect waves-teal btn-flat">查看报名信息</a>
+            </div>
+        </div>
+
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
 				<li>	
@@ -27,17 +35,12 @@
                             <div class="row">
                                 <div class="col s12">
                                     <div class="row"><br>
-										<div class="input-field col s8 m4">
+										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">perm_identity</i>
                                             <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" 
 											id="buptid" name="buptid" type="text" >
                                             <label for="buptid">学号</label>
                                         </div>
-										<div class="input-field col s4 m2">
-											<button id="confirm_id" class="btn waves-effect waves-light tooltipped" 
-												data-position="bottom" data-delay="50" data-tooltip="点我之后学号就不能修改了哦~︶ε╰✿ " type="submit">确定
-											</button>
-										</div>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">class</i>
                                             <input id="class" name="class" type="text">
