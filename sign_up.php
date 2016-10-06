@@ -27,7 +27,7 @@
         </div>
 
         <div class="container">
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible popout" data-collapsible="accordion">
 				<li>	
                     <div class="collapsible-header"><i class="material-icons">account_box</i>个人信息</div>
                     <div class="collapsible-body">
@@ -136,13 +136,13 @@
 								</div>
 								<div class="row">
                                     <div class="input-field col s12">
-										  <input class="with-gap" name="single_or_group" type="radio" id="app_for_single" value="single" />
+										  <input name="single_or_group" type="radio" id="app_for_single" value="single" />
 										  <label for="app_for_single">个人参赛</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                          <input class="with-gap" name="single_or_group" type="radio" id="app_for_group" value="team" />
+                                          <input name="single_or_group" type="radio" id="app_for_group" value="team" />
 										  <label for="app_for_group">组队参赛</label><br><br><br>
                                     </div>
                                     <div id="group_pos"><br><br><br>
@@ -179,7 +179,7 @@
     </div><br>
 	<form enctype="multipart/form-data" id="file" action="API/file.php" method="POST">
         <div class="container">
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible popout" data-collapsible="accordion">
 				<li>
                     <div class="collapsible-header"><i class="material-icons">radio</i>上传伴奏</div>
                     <div class="collapsible-body">
