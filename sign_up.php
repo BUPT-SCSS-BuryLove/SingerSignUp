@@ -232,6 +232,5 @@
   <script src="js/md5.js"></script>
   <script src="js/index.js"></script>
   <script src="js/form.js"></script>
-
   </body>
 </html>
