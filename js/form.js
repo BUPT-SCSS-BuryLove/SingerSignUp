@@ -15,7 +15,11 @@ $(document).ready(function(){
 					//Materialize.toast("注册成功！", 6000);
 				}
 				else {
-					$("#you-are-in").openModal();
+					$("#you-are-in").openModal({
+						complete: function() {
+							window.location.href = 'modify.php';
+						}
+					});
 				}
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
