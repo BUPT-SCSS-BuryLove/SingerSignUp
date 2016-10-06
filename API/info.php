@@ -1,7 +1,8 @@
 <?php
     include_once('config.php');
-    session_set_cookie_params(0, true, true);
+    //session_set_cookie_params(0, true, true);
     session_start();
+    //print(session_id());
     if (!isset($_SESSION['studentID'])) {
         print('{"result":"Forbidden"}');
         die();

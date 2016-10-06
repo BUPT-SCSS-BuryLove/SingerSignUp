@@ -1,7 +1,8 @@
 <?php
     include_once('config.php');
-    session_set_cookie_params(0, true, true);
+    //session_set_cookie_params(0, true, true);
     session_start();
+    //print(session_id());
     unset($_SESSION['studentID']);
 
     try {
@@ -15,9 +16,11 @@
     $stmt->execute(array($_POST['studentID']));
     $row = $stmt->fetch(PDO::FETCH_NAMED);
 
-    if ($row == null) {
-        print('{"result":"NewUser"}');
+    if ($row == null || $row['pwd'] == null) {
+        $stmt = $dbh->prepare("INSERT INTO `SingerInfo` (`studentID`, `pwd`, `token`, `campus`, `school`, `name`, `gender`, `contact`, `college_class`, `title`, `noMusic`, `type`, `teamName`, `teamPeople`, `teamInfo`, `file`) VALUES ( ? , NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'single', NULL, '1', NULL, NULL)");
+        $stmt->execute(array($_POST['studentID']));
         $_SESSION['studentID'] = $_POST['studentID'];
+        print('{"result":"NewUser"}');
     } else if ($row['pwd'] == $_POST['pwd']) {
         print('{"result":"Succeeded"}');
         $_SESSION['studentID'] = $_POST['studentID'];
