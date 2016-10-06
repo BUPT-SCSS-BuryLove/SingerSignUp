@@ -18,17 +18,17 @@
   <br><br><br>
   
   <div id="warning_card" class="container row" >
-        <div class="col s12">
+        <div class="col s12 m6 offset-m3">
             <div class="card  lighten-1">
                 <div class="card-content white black-text">
                     <span class="card-title">身份验证</span>
-                    <p style="font-size: 1rem;">登录失败？请<a href="#foot">联系我们</a></p>
-					<div class="input-field col s12 m6">
+                    <p style="font-size: 1rem;">无法登陆？请<a href="#foot">联系我们</a></p>
+					<div class="input-field col s12">
 						<i class="material-icons prefix">perm_identity</i>
 						<label for="buptid">学号</label>
 						<input id="buptid" name="buptid" type="text" >
 					</div>
-					<div class="input-field col s12 m6">
+					<div class="input-field col s12">
 					<i class="material-icons prefix">lock</i>
 						<label for="password">口令</label>
 						<input id="password" name="password" type="text" >  
