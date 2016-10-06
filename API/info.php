@@ -3,7 +3,7 @@
     session_set_cookie_params(0, true, true);
     session_start();
     if (!isset($_SESSION['studentID'])) {
-        print('{"status":"Forbidden"}');
+        print('{"result":"Forbidden"}');
         die();
     }
 
@@ -15,7 +15,7 @@
     }
 
     if ($_SERVER['REQUEST_METHOD']=="GET") {
-        foreach($dbh->query("SELECT * FROM SingerInfo WHERE studentID = {$_SESSION['studentID']}", PDO::FETCH_NAMED) as $result) {
+        foreach($dbh->query("SELECT studentID, pwd, campus, school, name, gender, contact, college_class, title, noMusic, type, teamName, teamPeople, teamInfo FROM SingerInfo WHERE studentID = {$_SESSION['studentID']}", PDO::FETCH_NAMED) as $result) {
             print(json_encode($result, JSON_UNESCAPED_UNICODE));
         }
         die();
@@ -30,9 +30,9 @@
             $stmt = $dbh->prepare("UPDATE SingerInfo SET pwd = ? WHERE studentID = {$_SESSION['studentID']}");
             $stmt->execute(array($_POST['pwd']));
         }
-        if (isset($_POST['location'])) {
-            $stmt = $dbh->prepare("UPDATE SingerInfo SET location = ? WHERE studentID = {$_SESSION['studentID']}");
-            $stmt->execute(array($_POST['location']));
+        if (isset($_POST['campus'])) {
+            $stmt = $dbh->prepare("UPDATE SingerInfo SET campus = ? WHERE studentID = {$_SESSION['studentID']}");
+            $stmt->execute(array($_POST['campus']));
         }
         if (isset($_POST['school'])) {
             $stmt = $dbh->prepare("UPDATE SingerInfo SET school = ? WHERE studentID = {$_SESSION['studentID']}");
@@ -50,9 +50,9 @@
             $stmt = $dbh->prepare("UPDATE SingerInfo SET contact = ? WHERE studentID = {$_SESSION['studentID']}");
             $stmt->execute(array($_POST['contact']));
         }
-        if (isset($_POST['class'])) {
-            $stmt = $dbh->prepare("UPDATE SingerInfo SET class = ? WHERE studentID = {$_SESSION['studentID']}");
-            $stmt->execute(array($_POST['class']));
+        if (isset($_POST['college_class'])) {
+            $stmt = $dbh->prepare("UPDATE SingerInfo SET college_class = ? WHERE studentID = {$_SESSION['studentID']}");
+            $stmt->execute(array($_POST['college_class']));
         }
         if (isset($_POST['title'])) {
             $stmt = $dbh->prepare("UPDATE SingerInfo SET title = ? WHERE studentID = {$_SESSION['studentID']}");
