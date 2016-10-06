@@ -22,8 +22,8 @@ $(document).ready(function(){
 					});
 				}
 			},
-			error: function (XMLHttpRequest, textStatus, errorThrown){    
-                alert("请联系我们	XMLHttpRequest " + XMLHttpRequest[0]);
+			error: function (XMLHttpRequest, textStatus, errorThrown){  
+                            alert("请联系我们	XMLHttpRequest " + XMLHttpRequest[0]);
 			}
 		});
 	});

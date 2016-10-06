@@ -204,7 +204,7 @@
 													<input name="userfile" type="file">
 												</div>
 												<div class="file-path-wrapper">
-													<input id="userfile" class="file-path validate" type="text">
+													<input id="userfile_name" class="file-path validate" type="text">
 												</div>
 											</div>
 											<div class="center">
