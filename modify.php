@@ -198,7 +198,7 @@
 											</div>
 											<div class="center">
 												<button id="submit_file" class="btn waves-effect waves-light tooltipped" 
-													data-position="bottom" data-delay="50" data-tooltip="上传成功后进度条会消失哦~︶ε╰︶" type="submit">上传
+													data-position="bottom" data-delay="50" data-tooltip="仿佛听到了可爱的宝宝们美丽的歌声~︶ε╰︶" type="submit">上传
 														<i class="material-icons right">cloud</i>
 												</button>
 											</div>
