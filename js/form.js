@@ -61,23 +61,6 @@ $(document).ready(function(){
 		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
-	
-	
-	$('#submit_file').click(function(e){
-		e.preventDefault();
-		$.ajax({
-			type:"POST",
-			url:"API/file.php",
-			data:{
-				
-			},
-			success:function (data) {
-				$('#indeterminate').slideUp();
-				Materialize.toast("文件上传成功！", 6000);
-				setTimeout("window.location.href = 'index.php'",6000); 
-			}
-		});
-	});
 
 });
 

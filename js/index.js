@@ -12,6 +12,7 @@ $(document).ready(function(){
 	$('select').material_select();
 	$('#single_pos').slideUp();
 	$('#group_pos').slideUp();
+	$('#modify').slideUp();
 });
 	
 	

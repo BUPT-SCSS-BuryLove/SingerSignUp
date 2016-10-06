@@ -17,6 +17,7 @@ $(document).ready(function(){
 				else if(data.result == "Succeeded"){
 					Materialize.toast("验证通过！请稍候……", 6000);
 					$("#warning_card").slideUp();
+					$("#modify").slideDown();
 					
 					$.ajax({
 						type:"GET",

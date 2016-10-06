@@ -38,7 +38,8 @@
             </div>
         </div>
     </div>
-
+	
+	<div id="modify">
 	<form id="application">
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
@@ -145,7 +146,7 @@
 										</div>
 										<div class="input-field col s12">
                                             <i class="material-icons prefix">supervisor_account</i>
-                                            <input id="number" name="number" type="text">
+                                            <input id="number" name="number" type="text" placeholder="不得超过6人">
                                             <label for="number">参赛人数</label>
 										</div>
 										<div class="input-field col s12">
@@ -209,6 +210,7 @@
 			</ul>
 		</div>
 	</form>
+	</div>
   <br><br><br>
   
 <a name="foot">  

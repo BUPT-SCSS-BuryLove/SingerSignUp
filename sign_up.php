@@ -150,7 +150,7 @@
 										</div>
 										<div class="input-field col s12">
                                             <i class="material-icons prefix">supervisor_account</i>
-                                            <input id="number" name="number" type="text">
+                                            <input id="number" name="number" type="text" placeholder="不得超过6人">
                                             <label for="number">参赛人数</label>
 										</div>
 										<div class="input-field col s12">
@@ -174,7 +174,7 @@
                     <i class="material-icons right">send</i>
                 </button>
     </div><br>
-	<form enctype="multipart/form-data" id="file" >
+	<form enctype="multipart/form-data" id="file" action="API/file.php" method="POST">
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
 				<li>
