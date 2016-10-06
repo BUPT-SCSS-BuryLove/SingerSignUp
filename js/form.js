@@ -35,7 +35,9 @@ $(document).ready(function(){
 		
 		var sub = new Object;
 		sub.studentID = $("#buptid").val();
-		sub.pwd = hex_md5($("#password").val());
+		if ($("#password").val() != "") {
+			sub.pwd = hex_md5($("#password").val());
+		}
 		sub.campus = $("#campus").val();
 		sub.school = $("#school").val();
 		sub.name = $("#name").val();
@@ -44,9 +46,12 @@ $(document).ready(function(){
 		sub.college_class = $("#class").val();
 		sub.title = $("#song").val();
 		sub.noMusic = $("#way").val();
-		sub.type = $("input[name='single_or_group'][checked]").val();
+		sub.type = $("input[name='single_or_group']:checked").val();
 		sub.teamName = $("#team_name").val();
-		sub.teamPeople = $("#number").val();
+		sub.teamPeople = parseInt($("#number").val());
+		if (isNaN(sub.teamPeople)) {
+			sub.teamPeople = 1;
+		}
 		sub.teamInfo = $("#others").val();
 		
 		$.ajax({

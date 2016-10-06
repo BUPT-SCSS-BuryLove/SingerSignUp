@@ -4,6 +4,10 @@
     session_start();
     //print(session_id());
     unset($_SESSION['studentID']);
+    
+    if (!isset($_POST['studentID'])) {
+        die();
+    }
 
     try {
         $dbh = new PDO("mysql:host={$db_config['host']};dbname={$db_config['dbName']}", $db_config['user'], $db_config['pwd'], [PDO::ATTR_PERSISTENT => true, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"]);
