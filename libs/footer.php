@@ -21,10 +21,11 @@
         <div class="col l3 s12">
 		</div>
         <div class="col l3 s12">
-		  <br><br>
+		  <br>
           <h6 class="white-text">联系我们</h6>
           <ul>
             <li><a class="white-text" href="mailto:linkin@zuos.tk">Linkin:   linkin@zuos.tk</a></li>
+			<li><a class="white-text" href="mailto:shzhaotc@gmail.com">Henryzhao:   shzhaotc#gmail.com</a></li>
 			<li><a class="white-text" href="mailto:carol_zhao@aliyun.com">Carol:   carol_zhao@aliyun.com</a></li>
           </ul>
         </div>

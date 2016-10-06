@@ -20,30 +20,29 @@
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">啊我这里需要宣传词</h5>
+            <h2 class="center brown-text"><i class="material-icons">voicemail</i></h2>
+            <h5 class="center">三院·三笙</h5>
 
-            <p class="light">涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -</p>
+            <p class="light center"> 何处繁华，何处笙歌，</p>
+			<p class="light center">三院齐聚，三笙齐鸣；</p>
+			<p class="light center">	机缘巧合，我们走到一起；</p>
+			<p class="light center"> 命中注定，我们歌舞相依。</p>
+			
           </div>
         </div>
 
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">啊我这里也需要宣传词</h5>
+            <h2 class="center brown-text"><i class="material-icons">invert_colors</i></h2>
+            <h5 class="center">有幸·有杏</h5>
 
-            <p class="light">涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">啊我这里还需要宣传词</h5>
-
-            <p class="light">涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- - 涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- 涐僦隨緶冩嚸牸- -髒噯傢鏃眞偉- -</p>
+            <p class="light center">    思慕是杏花的花语，</p>
+			<p class="light center">	有幸让我在丰收的秋季遇见你；</p>
+			<p class="light center">	杏坛路旁的私语，</p>
+			<p class="light center">	记录着多少纯真的回忆。</p>
+			
           </div>
         </div>
       </div>
@@ -69,8 +68,12 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>这里也需要宣传词- -</h4>
-          <p class="left-align light">文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~</p>
+          <h4>与你相遇，三生有幸</h4>
+          <p class="left-align light center">缘分使你我相遇，于秋天的杏坛路西；</p>
+		  <p class="left-align light center">你在舞台清唱，余音缭绕在我的心里；</p>
+		  <p class="left-align light center">三院齐聚，留下点滴欢声笑语；</p>
+		  <p class="left-align light center">我有嘉宾，鼓瑟吹笙；</p>
+		  <p class="left-align light center">与你相遇，三生有幸。</p>
         </div>
       </div>
 
@@ -84,7 +87,6 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/form init.js"></script>
-
+  <script src="js/index.js"></script>
   </body>
 </html>

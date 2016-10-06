@@ -22,7 +22,7 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>报名须知</h4>
-          <p class="left-align light">文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~文体部快快写策划~</p>
+          <p class="left-align light">若文件上传失败，请将姓名、学号、校区、学院、歌曲名、伴奏发送到buptssyx2016@163.com</p>
         </div>
       </div>
 
@@ -35,6 +35,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/form init.js"></script>
 
   </body>

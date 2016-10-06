@@ -17,7 +17,7 @@
   
   <br><br><br>
  
-	<form id="application" action="backend/DataHandler.php" method="post">
+	<form id="application">
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
 				<li>	
@@ -27,25 +27,42 @@
                             <div class="row">
                                 <div class="col s12">
                                     <div class="row"><br>
+										<div class="input-field col s8 m4">
+                                            <i class="material-icons prefix">perm_identity</i>
+                                            <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" 
+											id="buptid" name="buptid" type="text" >
+                                            <label for="buptid">学号</label>
+                                        </div>
+										<div class="input-field col s4 m2">
+											<button id="confirm_id" class="btn waves-effect waves-light tooltipped" 
+												data-position="bottom" data-delay="50" data-tooltip="点我之后学号就不能修改了哦~︶ε╰✿ " type="submit">确定
+											</button>
+										</div>
+										<div class="input-field col s12 m6">
+                                            <i class="material-icons prefix">class</i>
+                                            <input id="class" name="class" type="text">
+                                            <label for="class">班级</label>
+                                        </div>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">group_work</i>
                                             <select id="campus" name="campus">
                                                 <option value="" disabled selected>请选择</option>
-                                                <option value="西土城">西土城</option>
-                                                <option value="沙河">沙河</option>
-                                                <option value="宏福">宏福</option>
+                                                <option value="西土城校区">西土城</option>
+                                                <option value="沙河校区">沙河</option>
+                                                <option value="宏福校区">宏福</option>
                                             </select>
                                             <label for="campus">校区</label>
                                         </div>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">my_location</i>
-                                            <select id="college" name="college">
+                                            <select id="school" name="school">
                                                 <option value="" disabled selected>请选择</option>
-                                                <option value="数媒">数字媒体与设计艺术学院</option>
-                                                <option value="网安">网络空间安全学院</option>
-                                                <option value="软件">软件学院</option>
+                                                <option value="数字媒体与设计艺术学院">数字媒体与设计艺术学院</option>
+                                                <option value="网络空间安全学院">网络空间安全学院</option>
+                                                <option value="软件学院">软件学院</option>
+												<option value="公共管理学院">公共管理学院</option>
                                             </select>
-                                            <label for="college">学院</label>
+                                            <label for="school">学院</label>
                                         </div>
                                         <div class="input-field col s8 m4">
                                             <i class="material-icons prefix">account_circle</i>
@@ -55,8 +72,8 @@
                                         <div class="input-field col s4 m2">
                                             <select id="gender" name="gender">
                                                 <option value="" disabled selected>请选择</option>
-                                                <option value="M">男</option>
-                                                <option value="F">女</option>
+                                                <option value="男">男</option>
+                                                <option value="女">女</option>
                                             </select>
                                             <label for="gender">性别</label>
                                         </div>
@@ -65,16 +82,28 @@
                                             <input id="contact" name="contact" type="text">
                                             <label for="contact">联系方式</label>
                                         </div>
-                                        <div class="input-field col s12 m6">
-                                            <i class="material-icons prefix">perm_identity</i>
-                                            <input id="buptid" name="buptid" type="text">
-                                            <label for="buptid">学号</label>
-                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+				<li>
+					<div class="collapsible-header"><i class="material-icons">settings</i>设置口令</div>
+					<div class="collapsible-body">
+                        <div class="container in-collapsible">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="row"><br>
 										<div class="input-field col s12 m6">
-                                            <i class="material-icons prefix">class</i>
-                                            <input id="class" name="class" type="text">
-                                            <label for="class">班级</label>
-                                        </div>
+											口令有什么作用呢？<br><br>
+											当你的报名信息（伴奏、参赛曲目等）需要修改时，需要用到这个口令进行身份验证哦●ω●~<br>
+										</div>
+										<div class="input-field col s12 m6"><br><br>
+											<i class="material-icons prefix">lock</i>
+                                            <input id="password" name="password" placeholder="口令一定要牢记哦●ω●~" type="text">
+                                            <label for="password">口令</label>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -96,21 +125,21 @@
 										<i class="material-icons prefix">volume_mute</i>
                                         <select id="way" name="way">
 											<option value="" disabled selected>请选择</option>
-											<option value="清唱">是</option>
-											<option value="伴奏">否</option>
+											<option value="true">是</option>
+											<option value="false">否</option>
 										</select>
 										<label for="way">是否清唱</label>
                                     </div>
 								</div>
 								<div class="row">
                                     <div class="input-field col s12">
-										  <input class="with-gap" name="single_or_group" type="radio" id="app_for_single"  />
+										  <input class="with-gap" name="single_or_group" type="radio" id="app_for_single" value="single" />
 										  <label for="app_for_single">个人参赛</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                          <input class="with-gap" name="single_or_group" type="radio" id="app_for_group"  />
+                                          <input class="with-gap" name="single_or_group" type="radio" id="app_for_group" value="team" />
 										  <label for="app_for_group">组队参赛</label><br><br><br>
                                     </div>
                                     <div id="group_pos"><br><br><br>
@@ -136,6 +165,18 @@
                         </div>
                     </div>
                 </li>
+			</ul>
+        </div>
+    </form>
+	<div class="center">
+                <button id="submit_btn" class="btn waves-effect waves-light tooltipped"
+                        data-position="bottom" data-delay="50" data-tooltip="(灬ºωº灬)又有可爱的宝宝来报名辣好开森~︶ε╰✿ " type="submit">提交
+                    <i class="material-icons right">send</i>
+                </button>
+    </div><br>
+	<form enctype="multipart/form-data" id="file" >
+        <div class="container">
+            <ul class="collapsible" data-collapsible="expandable">
 				<li>
                     <div class="collapsible-header"><i class="material-icons">radio</i>上传伴奏</div>
                     <div class="collapsible-body">
@@ -144,8 +185,7 @@
                                 <div class="col s12">
                                     <div class="row">
 										<div class="input-field col s12">
-											<span>想要清唱的宝宝直接无视这里好了ㄟ(◑‿◐ )ㄏ</span><br>
-											<span>现在还没有定下曲目的宝宝，别急别急⊙ω⊙~报名资料以后还可以再修改哦●ω●</span>
+											<span>在这里上传音频或修改音频哦●ω●~</span><br>
 											<br><br>
 										</div>
 										<div class="input-field col s12">
@@ -156,8 +196,9 @@
 										<div class="input-field col s12">
 											<div class="file-field input-field">
 												<div class="btn">
+													<input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
 													<span>选择音频<i class="material-icons right">radio</i></span>
-													<input type="file">
+													<input name="userfile" type="file">
 												</div>
 												<div class="file-path-wrapper">
 													<input class="file-path validate" type="text">
@@ -165,7 +206,7 @@
 											</div>
 											<div class="center">
 												<button id="submit_file" class="btn waves-effect waves-light tooltipped" 
-													data-position="bottom" data-delay="50" data-tooltip="上传成功后进度条会消失哦~︶ε╰✿ " type="submit">上传
+													data-position="bottom" data-delay="50" data-tooltip="上传成功后进度条会消失哦~︶ε╰︶" type="submit">上传
 														<i class="material-icons right">cloud</i>
 												</button>
 											</div>
@@ -176,40 +217,10 @@
                         </div>
                     </div>
                 </li>
-                <li>
-					<div class="collapsible-header"><i class="material-icons">settings</i>设置口令</div>
-					<div class="collapsible-body">
-                        <div class="container in-collapsible">
-                            <div class="row">
-                                <div class="col s12">
-                                    <div class="row"><br>
-										<div class="input-field col s12 m6">
-											口令有什么作用呢？<br><br>
-											当你的报名信息（伴奏、参赛曲目等）需要修改时，需要用到这个口令进行身份验证哦●ω●~<br>
-											本次填写的信息已确认无误的宝宝就可以不用填写此口令啦●ω●~
-										</div>
-										<div class="input-field col s12 m6"><br><br>
-											<i class="material-icons prefix">lock</i>
-                                            <input id="password" name="password" placeholder="口令一定要牢记哦●ω●~" type="text">
-                                            <label for="password">口令</label>
-										</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+			</ul>
+		</div>
+	</form>
                 
-            </ul>
-            <div class="center">
-                <button id="submit_btn" class="btn waves-effect waves-light tooltipped"
-                        data-position="bottom" data-delay="50" data-tooltip="(灬ºωº灬)又有可爱的宝宝来报名辣好开森~︶ε╰✿ " type="submit">提交
-                    <i class="material-icons right">send</i>
-                </button>
-            </div>
-        </div>
-    </form>
-
   <br><br><br>
   
 <?php include 'libs/footer.php';?>
@@ -218,7 +229,9 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/form init.js"></script>
+  <script src="js/md5.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/form.js"></script>
 
   </body>
 </html>

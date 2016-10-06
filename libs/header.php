@@ -25,7 +25,7 @@
         </div>
         <div class="row center">
           <a href="sign_up.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><i class="material-icons left">cloud</i>我要报名</a>
-          <a href="modify.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><i class="material-icons left">cloud</i>修改报名信息</a>
+          <a href="modify.php" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><i class="material-icons left">cloud</i>修改/查看报名信息</a>
 	   </div>
         <br><br>
 
