@@ -44,6 +44,7 @@ $(document).ready(function(){
 							if(data.type=="single"){
 								$("input#app_for_single").attr("checked",'checked');
 							}else $("input#app_for_group").attr("checked",'checked');
+							Materialize.updateTextFields();
 						},
 						error: function (XMLHttpRequest, textStatus, errorThrown){    
 								alert("XMLHttpRequest " + XMLHttpRequest[0]);
