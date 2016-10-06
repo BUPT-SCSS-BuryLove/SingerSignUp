@@ -125,8 +125,8 @@
 										<i class="material-icons prefix">volume_mute</i>
                                         <select id="way" name="way">
 											<option value="" disabled selected>请选择</option>
-											<option value="true">是</option>
-											<option value="false">否</option>
+											<option value="1">是</option>
+											<option value="0">否</option>
 										</select>
 										<label for="way">是否清唱</label>
                                     </div>
@@ -201,7 +201,7 @@
 													<input name="userfile" type="file">
 												</div>
 												<div class="file-path-wrapper">
-													<input class="file-path validate" type="text">
+													<input id="userfile" class="file-path validate" type="text">
 												</div>
 											</div>
 											<div class="center">

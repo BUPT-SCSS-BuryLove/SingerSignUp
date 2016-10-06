@@ -35,6 +35,7 @@ $(document).ready(function(){
 							$("#team_name").val(data.teamName);
 							$("#number").val(data.teamPeople);
 							$("#others").val(data.teamInfo);
+							$("#userfile").val(data.userfile);
 							if(data.type=="single"){
 								$("input#app_for_single").attr("checked",'checked');
 							}else $("input#app_for_group").attr("checked",'checked');
