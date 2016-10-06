@@ -44,7 +44,7 @@
 	<div id="modify">
 
         <div class="container">
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible popout" data-collapsible="accordion">
 				<li>	
                     <div class="collapsible-header"><i class="material-icons">account_box</i>个人信息</div>
                     <div class="collapsible-body">
@@ -54,8 +54,8 @@
                                     <div class="row"><br>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">perm_identity</i>
-                                            <input id="buptid" name="buptid" type="text"  disabled="disabled">
-                                            <label for="buptid">学号</label>
+                                            <input id="buptid2" name="buptid" type="text"  disabled="disabled">
+                                            <label for="buptid2">学号</label>
                                         </div>
 										<div class="input-field col s12 m6">
                                             <i class="material-icons prefix">class</i>
@@ -91,8 +91,8 @@
                                         <div class="input-field col s4 m2">
                                             <select id="gender" name="gender">
                                                 <option value="" disabled selected>请选择</option>
-                                                <option value="M">男</option>
-                                                <option value="F">女</option>
+                                                <option value="男">男</option>
+                                                <option value="女">女</option>
                                             </select>
                                             <label for="gender">性别</label>
                                         </div>
@@ -123,21 +123,21 @@
 										<i class="material-icons prefix">volume_mute</i>
                                         <select id="way" name="way">
 											<option value="" disabled selected>请选择</option>
-											<option value="清唱">是</option>
-											<option value="伴奏">否</option>
+											<option value=1>是</option>
+											<option value=0>否</option>
 										</select>
 										<label for="way">是否清唱</label>
                                     </div>
 								</div>
 								<div class="row">
                                     <div class="input-field col s12">
-										  <input class="with-gap" name="single_or_group" type="radio" id="app_for_single" value="single" />
+										  <input name="single_or_group" type="radio" id="app_for_single" value="single" />
 										  <label for="app_for_single">个人参赛</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                          <input class="with-gap" name="single_or_group" type="radio" id="app_for_group" value="team" />
+                                          <input name="single_or_group" type="radio" id="app_for_group" value="team" />
 										  <label for="app_for_group">组队参赛</label><br><br><br>
                                     </div>
                                     <div id="group_pos"><br><br><br>
@@ -168,7 +168,7 @@
     <br>
 	<form enctype="multipart/form-data" action="API/file.php" method="POST" id="file" >
         <div class="container">
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible popout" data-collapsible="accordion">
 				<li>
                     <div class="collapsible-header"><i class="material-icons">radio</i>上传伴奏</div>
                     <div class="collapsible-body">

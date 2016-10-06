@@ -7,8 +7,8 @@ $(document).ready(function(){
 			url:"API/signIn.php",
 			dataType:"json",
 			data:{ 
-				studentID: $('#buptid').val();
-				pwd: hex_md5($("#password").val());
+				studentID: $('#buptid').val(),
+				pwd: hex_md5($("#password").val())
 			},
 			success:function(data){
 				if(data.result == "NewUser"){
@@ -24,15 +24,19 @@ $(document).ready(function(){
 						url:"API/info.php",
 						dataType:"json",
 						success:function(data){
-							$("#buptid").val(data.studentID);
+							$("#buptid2").val(data.studentID);
 							$("#campus").val(data.campus);
+							$("#campus").material_select();
 							$("#school").val(data.school);
+							$("#school").material_select();
 							$("#name").val(data.name);
 							$("#gender").val(data.gender);
+							$("#gender").material_select();
 							$("#contact").val(data.contact);
 							$("#class").val(data.college_class);
 							$("#song").val(data.title);
 							$("#way").val(data.noMusic);
+							$("#way").material_select();
 							$("#team_name").val(data.teamName);
 							$("#number").val(data.teamPeople);
 							$("#others").val(data.teamInfo);
@@ -53,6 +57,7 @@ $(document).ready(function(){
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
                 alert("XMLHttpRequest " + XMLHttpRequest[0]);
 			}
+		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
@@ -62,8 +67,13 @@ $(document).ready(function(){
 		url:"API/Info.php",
 		dataType:"json",
 		success:function(data){
+			if (data.result == "Succeeded") {
 				Materialize.toast("修改成功！", 6000);
-			},
+			} else {
+			    Materialize.toast("修改失败 请重试", 6000);
+			}
+				
+		},
 		error: function (XMLHttpRequest, textStatus, errorThrown){    
             alert("XMLHttpRequest " + XMLHttpRequest[0]);
 		}
@@ -73,84 +83,84 @@ $(document).ready(function(){
 	$('#class').change(function(){
 		$.ajax({
 			data:{ 
-				college_class:$("#class").val();
+				college_class:$("#class").val()
 			},
 		});
 	});
 	$('#campus').change(function(){
 		$.ajax({
 			data:{ 
-				campus:$("#campus").val();
+				campus:$("#campus").val()
 			},
 		});
 	});
 	$('#school').change(function(){
 		$.ajax({
 			data:{ 
-				school:$("#school").val();
+				school:$("#school").val()
 			},
 		});
 	});
 	$('#name').change(function(){
 		$.ajax({
 			data:{ 
-				name:$("#name").val();
+				name:$("#name").val()
 			},
 		});
 	});
 	$('#gender').change(function(){
 		$.ajax({
 			data:{ 
-				gender:$("#gender").val();
+				gender:$("#gender").val()
 			},
 		});
 	});
 	$('#contact').change(function(){
 		$.ajax({
 			data:{ 
-				contact:$("#contact").val();
+				contact:$("#contact").val()
 			},
 		});
 	});
 	$('#song').change(function(){
 		$.ajax({
 			data:{ 
-				title:$("#song").val();
+				title:$("#song").val()
 			},
 		});
 	});
 	$('#way').change(function(){
 		$.ajax({
 			data:{ 
-				noMusic:$("#way").val();
+				noMusic:$("#way").val()
 			},
 		});
 	});
 	$('[name=single_or_group]').change(function(){
 		$.ajax({
 			data:{ 
-				type:$("input[name='single_or_group'][checked]").val();
+				type:$("input[name='single_or_group']:checked").val()
 			},
 		});
 	});
 	$('#team_name').change(function(){
 		$.ajax({
 			data:{ 
-				teamName:$("#team_name").val();
+				teamName:$("#team_name").val()
 			},
 		});
 	});
 	$('#number').change(function(){
 		$.ajax({
 			data:{ 
-				teamPeople:$("#number").val();
+				teamPeople:$("#number").val()
 			},
 		});
 	});
 	$('#others').change(function(){
 		$.ajax({
 			data:{ 
-				teamInfo:$("#others").val();
+				teamInfo:$("#others").val()
 			},
 		});
 	});
