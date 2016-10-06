@@ -2,14 +2,15 @@
 $(document).ready(function(){
 	$('#confirm_pwd').click(function(e){
 		
+		var subinfo = new Object;
+		subinfo.studentID = $('#buptid').val();
+		subinfo.pwd = hex_md5($("#password").val());
+		
 		$.ajax({
 			type:"POST",
 			url:"API/signIn.php",
 			dataType:"json",
-			data:{ 
-				studentID: $('#buptid').val();
-				pwd: hex_md5($("#password").val());
-			},
+			data:subinfo,
 			success:function(data){
 				if(data.result == "NewUser"){
 					Materialize.toast("您还没有注册过！", 6000);
@@ -52,7 +53,8 @@ $(document).ready(function(){
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
                 alert("XMLHttpRequest " + XMLHttpRequest[0]);
-			}
+			},
+		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
@@ -65,93 +67,93 @@ $(document).ready(function(){
 				Materialize.toast("修改成功！", 6000);
 			},
 		error: function (XMLHttpRequest, textStatus, errorThrown){    
-            alert("XMLHttpRequest " + XMLHttpRequest[0]);
+            alert("error:XMLHttpRequest " + XMLHttpRequest[0]);
 		}
 	});
 	
 	
 	$('#class').change(function(){
+		var sub = new Object;
+		sub.college_class = $("#class").val();
 		$.ajax({
-			data:{ 
-				college_class:$("#class").val();
-			},
+			data:sub,
 		});
 	});
 	$('#campus').change(function(){
+		var sub = new Object;
+		sub.campus = $("#campus").val();
 		$.ajax({
-			data:{ 
-				campus:$("#campus").val();
-			},
+			data:sub,
 		});
 	});
 	$('#school').change(function(){
+		var sub = new Object;
+		sub.school = $("#school").val();
 		$.ajax({
-			data:{ 
-				school:$("#school").val();
-			},
+			data:sub,
 		});
 	});
 	$('#name').change(function(){
+		var sub = new Object;
+		sub.name = $("#name").val();
 		$.ajax({
-			data:{ 
-				name:$("#name").val();
-			},
+			data:sub,
 		});
 	});
 	$('#gender').change(function(){
+		var sub = new Object;
+		sub.gender = $("#gender").val();
 		$.ajax({
-			data:{ 
-				gender:$("#gender").val();
-			},
+			data:sub,
 		});
 	});
 	$('#contact').change(function(){
+		var sub = new Object;
+		sub.contact = $("#contact").val();
 		$.ajax({
-			data:{ 
-				contact:$("#contact").val();
-			},
+			data:sub,
 		});
 	});
 	$('#song').change(function(){
+		var sub = new Object;
+		sub.title = $("#song").val();
 		$.ajax({
-			data:{ 
-				title:$("#song").val();
-			},
+			data:sub,
 		});
 	});
 	$('#way').change(function(){
+		var sub = new Object;
+		sub.noMusic = $("#way").val();
 		$.ajax({
-			data:{ 
-				noMusic:$("#way").val();
-			},
+			data:sub,
 		});
 	});
 	$('[name=single_or_group]').change(function(){
+		var sub = new Object;
+		sub.type = $("input[name='single_or_group'][checked]").val();
 		$.ajax({
-			data:{ 
-				type:$("input[name='single_or_group'][checked]").val();
-			},
+			data:sub,
 		});
 	});
 	$('#team_name').change(function(){
+		var sub = new Object;
+		sub.teamName = $("#team_name").val();
 		$.ajax({
-			data:{ 
-				teamName:$("#team_name").val();
-			},
+			data:sub,
 		});
 	});
 	$('#number').change(function(){
+		var sub = new Object;
+		sub.teamPeople = $("#number").val();
 		$.ajax({
-			data:{ 
-				teamPeople:$("#number").val();
-			},
+			data:sub,
 		});
 	});
 	$('#others').change(function(){
+		var sub = new Object;
+		sub.teamInfo = $("#others").val();
 		$.ajax({
-			data:{ 
-				teamInfo:$("#others").val();
-			},
+			data:sub,
 		});
 	});
 	

@@ -17,7 +17,7 @@ $(document).ready(function(){
 				}
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
-                alert("XMLHttpRequest " + XMLHttpRequest[0]);
+                alert("error:XMLHttpRequest  " + XMLHttpRequest[0]);
 			}
 		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
