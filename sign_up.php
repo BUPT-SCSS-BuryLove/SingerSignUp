@@ -17,7 +17,7 @@
   
   <br><br><br>
  
-	<form id="application">
+	
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
 				<li>	
@@ -167,7 +167,7 @@
                 </li>
 			</ul>
         </div>
-    </form>
+    
 	<div class="center">
                 <button id="submit_btn" class="btn waves-effect waves-light tooltipped"
                         data-position="bottom" data-delay="50" data-tooltip="(灬ºωº灬)又有可爱的宝宝来报名辣好开森~︶ε╰✿ " type="submit">提交

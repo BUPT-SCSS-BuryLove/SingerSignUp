@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>“三笙有杏”歌手大赛报名</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
 
   <!-- CSS  -->
@@ -24,10 +24,12 @@
                     <span class="card-title">身份验证</span>
                     <p style="font-size: 1rem;">登录失败？请<a href="#foot">联系我们</a></p>
 					<div class="input-field col s12 m6">
+						<i class="material-icons prefix">perm_identity</i>
 						<label for="buptid">学号</label>
 						<input id="buptid" name="buptid" type="text" >
 					</div>
 					<div class="input-field col s12 m6">
+					<i class="material-icons prefix">lock</i>
 						<label for="password">口令</label>
 						<input id="password" name="password" type="text" >  
 					</div>			
@@ -40,7 +42,7 @@
     </div>
 	
 	<div id="modify">
-	<form id="application">
+
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
 				<li>	
@@ -163,7 +165,7 @@
                 </li> 
             </ul>
         </div>
-    </form><br>
+    <br>
 	<form enctype="multipart/form-data" action="API/file.php" method="POST" id="file" >
         <div class="container">
             <ul class="collapsible" data-collapsible="expandable">
