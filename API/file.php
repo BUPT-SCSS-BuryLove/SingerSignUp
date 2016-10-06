@@ -11,7 +11,8 @@
         print('Forbidden');
         die();
     }
-    $filename = '../FILE/'.basename($_FILES['userfile']['name']);
+    $fileBasename = basename($_FILES['userfile']['name']);
+    $filename = '../FILE/'.$fileBasename;
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $filename)) {
     } else {
         print('Failed');
@@ -26,7 +27,7 @@
         
 
         $stmt = $dbh->prepare("UPDATE SingerInfo SET file = ? WHERE studentID = {$_SESSION['studentID']}");
-        $stmt->execute(array($filename));
+        $stmt->execute(array($fileBasename));
         $dbh->commit();
     } catch (PDOExveption $e) {
         $dbh->rollBack();

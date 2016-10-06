@@ -16,7 +16,7 @@
     }
 
     if ($_SERVER['REQUEST_METHOD']=="GET") {
-        foreach($dbh->query("SELECT studentID, pwd, campus, school, name, gender, contact, college_class, title, noMusic, type, teamName, teamPeople, teamInfo FROM SingerInfo WHERE studentID = {$_SESSION['studentID']}", PDO::FETCH_NAMED) as $result) {
+        foreach($dbh->query("SELECT studentID, pwd, campus, school, name, gender, contact, college_class, title, noMusic, type, teamName, teamPeople, teamInfo, file FROM SingerInfo WHERE studentID = {$_SESSION['studentID']}", PDO::FETCH_NAMED) as $result) {
             print(json_encode($result, JSON_UNESCAPED_UNICODE));
         }
         die();
