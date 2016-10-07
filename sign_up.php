@@ -177,7 +177,7 @@
                     <i class="material-icons right">send</i>
                 </button>
     </div><br>
-	<form enctype="multipart/form-data" id="file" action="API/file.php" method="POST">
+	
         <div class="container">
             <ul class="collapsible popout" data-collapsible="accordion">
 				<li>
@@ -192,7 +192,7 @@
 											<br><br>
 										</div>
 										<div class="input-field col s12">
-											<div class="progress">
+											<div class="progress" id="upload-progress">
 												<div class="indeterminate"></div>
 											</div>
 										</div>
@@ -201,17 +201,11 @@
 												<div class="btn">
 													<input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
 													<span>选择音频<i class="material-icons right">radio</i></span>
-													<input name="userfile" type="file">
+													<input id="userfile" name="userfile" type="file">
 												</div>
 												<div class="file-path-wrapper">
 													<input id="userfile_name" class="file-path validate" type="text">
 												</div>
-											</div>
-											<div class="center">
-												<button id="submit_file" class="btn waves-effect waves-light tooltipped" 
-													data-position="bottom" data-delay="50" data-tooltip="仿佛听到了可爱的宝宝们美丽的歌声~︶ε╰︶" type="submit">上传
-														<i class="material-icons right">cloud</i>
-												</button>
 											</div>
 										</div>
 									</div>
@@ -222,7 +216,7 @@
                 </li>
 			</ul>
 		</div>
-	</form>
+
                 
   <br><br><br>
   
@@ -232,6 +226,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/jquery.ajaxfileupload.js"></script>
   <script src="js/md5.js"></script>
   <script src="js/index.js"></script>
   <script src="js/form.js"></script>
