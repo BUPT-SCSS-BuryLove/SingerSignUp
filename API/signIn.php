@@ -18,16 +18,14 @@
 
     try {
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $dbh->beginTransaction();
-        
         
         $stmt = $dbh->prepare("SELECT studentID, pwd FROM `SingerInfo` WHERE studentID = ?");
         $stmt->execute(array($_POST['studentID']));
-        $row = $stmt->fetch(PDO::FETCH_NAMED);
-
-        if ($row == null) {
+        if (!$row = $stmt->fetch(PDO::FETCH_NAMED)) {
             $stmt = $dbh->prepare("INSERT INTO `SingerInfo` (`studentID`) VALUES ( ? )");
-            $stmt->execute(array($_POST['studentID']));
+            if($stmt->execute(array($_POST['studentID']))){
+                print('insert');
+            }
             $_SESSION['studentID'] = $_POST['studentID'];
             print('{"result":"NewUser"}');
         } else if ($row['pwd'] == null) {
