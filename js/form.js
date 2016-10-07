@@ -59,7 +59,7 @@ $(document).ready(function(){
 		var sub = new Object;
 		sub.studentID = $("#buptid").val();
 		if ($("#password").val() != "") {
-			sub.pwd = hex_md5($("#password").val());
+			sub.pwd = hex_md5(b64_md5(hex_md5($("#password").val())));
 		}
 		sub.campus = $("#campus").val();
 		sub.school = $("#school").val();

@@ -4,7 +4,7 @@ $(document).ready(function(){
 		
 		var subinfo = new Object;
 		subinfo.studentID = $('#buptid').val();
-		subinfo.pwd = hex_md5($("#password").val());
+		subinfo.pwd = hex_md5(b64_md5(hex_md5($("#password").val())));
 		
 		$.ajax({
 			type:"POST",

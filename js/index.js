@@ -48,6 +48,9 @@ $(document).ready(function(){
   $("#contact").keyup(function(){
     limit(this,11);
   });
+  $("#class").keyup(function(){
+    limit(this,10);
+  });
 	$('.modal-trigger').leanModal();
   $("#userfile").ajaxfileupload({
 			action: 'API/file.php',
