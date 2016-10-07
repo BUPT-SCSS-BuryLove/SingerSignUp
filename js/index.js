@@ -50,7 +50,7 @@ $(document).ready(function(){
   })
   $("#userfile").ajaxfileupload({
 			action: 'API/file.php',
-			valid_extensions : ['mp3','wav', 'aac', 'flac', 'aep'],
+			valid_extensions : ['mp3','wav', 'aac', 'flac', 'aep', 'm4a'],
 			onComplete: function(response) {
 				$("#upload-progress").hide();
 				if (response == "Succeeded") {
@@ -58,7 +58,7 @@ $(document).ready(function(){
 				} else if (response == "Forbidden") {
 					Materialize.toast("未注册，提交失败！请检查学号！", 6000);
 				} else {
-					Materialize.toast("上传失败！", 6000);
+					Materialize.toast("上传失败！请阅读报名须知并检查文件大小和类型", 6000);
 				}
 			},
 			onStart: function() {
