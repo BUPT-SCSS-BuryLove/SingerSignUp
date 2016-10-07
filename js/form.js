@@ -89,7 +89,7 @@ $(document).ready(function(){
 				else if(data.result == "Forbidden"){
 					Materialize.toast("未注册，提交失败！请检查学号！", 6000);
 				}
-				else Materialize.toast("提交失败！", 6000);
+				else Materialize.toast("提交失败！请把信息填写完整", 6000);
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
 			}
