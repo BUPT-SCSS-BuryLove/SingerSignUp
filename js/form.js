@@ -17,7 +17,7 @@ $(document).ready(function(){
 				else {
 					$("#you-are-in").openModal({
 						complete: function() {
-							window.location.href = 'modify.php';
+							window.location.href = 'modify.html';
 						}
 					});
 				}
