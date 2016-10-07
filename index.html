@@ -19,16 +19,34 @@
       <a id="logo-container" href="#" class="brand-logo">三笙有杏</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">首页</a></li>
-		<li><a target="_blank" href="notice.html">报名须知</a></li>
+		<li><a target="_blank" href="#notice" class="modal-trigger">报名须知</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="index.html">首页</a></li>
-		<li><a target="_blank" href="notice.html">报名须知</a></li>
+		<li><a target="_blank" href="#notice" class="modal-trigger">报名须知</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+    <!-- Modal Structure -->
+  <div id="notice" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>报名须知</h4>
+      <p class="left-align light ">1.若文件上传失败，请将姓名、学号、校区、学院、歌曲名、伴奏发送到 <a href="mailto:buptssyx2016@163.com">buptssyx2016@163.com</a>
+      <br>
+      文件不能超过20M，类型仅限mp3、wav、aac、flac、aep、m4a</p>
+		  <p class="left-align light ">2.若为组队方式参赛，人数上限为6人。</p>
+		  <p class="left-align light ">3.伴奏文件线上提交截止时间：海选前一天21:00</p>
+		  <p class="left-align light ">4.海选时间：</p>
+		  <p class="left-align light ">宏福校区：2016年10月13日（周四）晚 学生活动中心二层 乐队排练室</p>
+		  <p class="left-align light ">沙河校区：2016年10月14日（周五）晚</p>
+		  <p class="left-align light ">西土城校区：2016年10月17日（周一）晚 教二录音棚（另设等候室）</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">了解</a>
+    </div>
+  </div>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
@@ -39,8 +57,11 @@
           <h5 class="header col s12 light">软件学院<br>数字媒体与设计艺术学院<br>网络空间安全学院<br>联合举办</h5>
         </div>
         <div class="row center">
-          <a href="sign_up.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">我要报名</a>
-          <a href="modify.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">编辑报名信息</a>
+          <a href="sign_up.html" class="btn waves-effect waves-light teal lighten-1">我要报名</a>
+          <a href="modify.html" class="btn waves-effect waves-light teal lighten-1">编辑报名信息</a>
+        </div>
+        <div class="row center">
+          <a href="#notice" class="btn waves-effect waves-light teal lighten-1 modal-trigger">报名须知</a>
 	   </div>
         <br><br>
 

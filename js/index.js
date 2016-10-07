@@ -47,7 +47,8 @@ $(document).ready(function(){
   });
   $("#contact").keyup(function(){
     limit(this,11);
-  })
+  });
+	$('.modal-trigger').leanModal();
   $("#userfile").ajaxfileupload({
 			action: 'API/file.php',
 			valid_extensions : ['mp3','wav', 'aac', 'flac', 'aep', 'm4a'],
@@ -68,7 +69,8 @@ $(document).ready(function(){
 				console.log('no file selected');
 			}
 		});
-})
+		
+});
 
 $('#app_for_single').change(function () {
     if($(this).is(':checked')){
