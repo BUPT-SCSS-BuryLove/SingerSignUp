@@ -44,7 +44,10 @@ $(document).ready(function(){
 							$("#userfile_name").val(data.file);
 							if(data.type=="single"){
 								$("input#app_for_single").attr("checked",'checked');
-							}else $("input#app_for_group").attr("checked",'checked');
+							}else {
+								$("input#app_for_group").attr("checked",'checked');
+								$("#group_pos").slideDown();
+							}
 							Materialize.updateTextFields();
 						},
 						error: function (XMLHttpRequest, textStatus, errorThrown){    
