@@ -13,16 +13,6 @@ $(document).ready(function(){
 	$('#single_pos').slideUp();
 	$('#group_pos').slideUp();
 	$('#modify').slideUp();
-  $.ajax({
-			type:"POST",
-			url:"API/signIn.php",
-			dataType:"json",
-			data:{},
-			success:function(data){
-			},
-			error: function (XMLHttpRequest, textStatus, errorThrown){
-			}
-		});
 });
 	
 	
@@ -43,7 +33,11 @@ function limit(obj,limit){
 $(document).ready(function(){
   $("#buptid").keyup(function(){
     limit(this,10);
-  })
+  });
+  $("#contact").keyup(function(){
+    limit(this,11);
+  });
+  
 })
 
 $('#app_for_single').change(function () {

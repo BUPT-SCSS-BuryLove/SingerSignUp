@@ -25,19 +25,15 @@ $(document).ready(function(){
 						url:"API/info.php",
 						dataType:"json",
 						success:function(data){
-							$("#buptid2").val(data.studentID);
+							$("#buptid").val(data.studentID);
 							$("#campus").val(data.campus);
-							$("#campus").material_select();
 							$("#school").val(data.school);
-							$("#school").material_select();
 							$("#name").val(data.name);
 							$("#gender").val(data.gender);
-							$("#gender").material_select();
 							$("#contact").val(data.contact);
 							$("#class").val(data.college_class);
 							$("#song").val(data.title);
 							$("#way").val(data.noMusic);
-							$("#way").material_select();
 							$("#team_name").val(data.teamName);
 							$("#number").val(data.teamPeople);
 							$("#others").val(data.teamInfo);
@@ -45,7 +41,6 @@ $(document).ready(function(){
 							if(data.type=="single"){
 								$("input#app_for_single").attr("checked",'checked');
 							}else $("input#app_for_group").attr("checked",'checked');
-							Materialize.updateTextFields();
 						},
 						error: function (XMLHttpRequest, textStatus, errorThrown){    
 								alert("XMLHttpRequest " + XMLHttpRequest[0]);
@@ -58,7 +53,7 @@ $(document).ready(function(){
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
                 alert("XMLHttpRequest " + XMLHttpRequest[0]);
-			}
+			},
 		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
@@ -69,13 +64,8 @@ $(document).ready(function(){
 		url:"API/Info.php",
 		dataType:"json",
 		success:function(data){
-			if (data.result == "Succeeded") {
 				Materialize.toast("修改成功！", 6000);
-			} else {
-			    Materialize.toast("修改失败 请重试", 6000);
-			}
-				
-		},
+			},
 		error: function (XMLHttpRequest, textStatus, errorThrown){    
             alert("error:XMLHttpRequest " + XMLHttpRequest[0]);
 		}
@@ -86,84 +76,84 @@ $(document).ready(function(){
 		var sub = new Object;
 		sub.college_class = $("#class").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#campus').change(function(){
 		var sub = new Object;
 		sub.campus = $("#campus").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#school').change(function(){
 		var sub = new Object;
 		sub.school = $("#school").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#name').change(function(){
 		var sub = new Object;
 		sub.name = $("#name").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#gender').change(function(){
 		var sub = new Object;
 		sub.gender = $("#gender").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#contact').change(function(){
 		var sub = new Object;
 		sub.contact = $("#contact").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#song').change(function(){
 		var sub = new Object;
 		sub.title = $("#song").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#way').change(function(){
 		var sub = new Object;
 		sub.noMusic = $("#way").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$("input[name='single_or_group']").change(function(){
 		var sub = new Object;
-		sub.type = $("input[name='single_or_group'][checked]").val();
+		sub.type = $("input[name='single_or_group']:checked").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#team_name').change(function(){
 		var sub = new Object;
 		sub.teamName = $("#team_name").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#number').change(function(){
 		var sub = new Object;
 		sub.teamPeople = $("#number").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	$('#others').change(function(){
 		var sub = new Object;
 		sub.teamInfo = $("#others").val();
 		$.ajax({
-			data:sub
+			data:sub,
 		});
 	});
 	

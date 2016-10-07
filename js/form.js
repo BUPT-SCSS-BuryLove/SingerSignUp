@@ -1,31 +1,26 @@
 
 $(document).ready(function(){
 	
-	$('#buptid').change(function(){//注册
+	$('#confirm_id').click(function(e){//注册
 		$.ajax({
 			type:"POST",
 			url:"API/signIn.php",
 			dataType:"json",
-			data:{
-				"studentID": $('#buptid').val(),
-				"pwd":""
-			},
+			data:{ studentID:$('#buptid').val() },
 			success:function(data){
 				if(data.result == "NewUser"){
-					//Materialize.toast("注册成功！", 6000);
+					Materialize.toast("注册成功！", 6000);
 				}
 				else {
-					$("#you-are-in").openModal({
-						complete: function() {
-							window.location.href = 'modify.php';
-						}
-					});
+					Materialize.toast("您已经注册过了哦！", 6000);
+					setTimeout("window.location.href = 'modify.php'",6000);  
 				}
 			},
-			error: function (XMLHttpRequest, textStatus, errorThrown){  
-                            alert("请联系我们	XMLHttpRequest " + XMLHttpRequest[0]);
+			error: function (XMLHttpRequest, textStatus, errorThrown){    
+                alert("error:XMLHttpRequest  " + XMLHttpRequest[0]);
 			}
 		});
+		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
 
@@ -35,9 +30,7 @@ $(document).ready(function(){
 		
 		var sub = new Object;
 		sub.studentID = $("#buptid").val();
-		if ($("#password").val() != "") {
-			sub.pwd = hex_md5($("#password").val());
-		}
+		sub.pwd = hex_md5($("#password").val());
 		sub.campus = $("#campus").val();
 		sub.school = $("#school").val();
 		sub.name = $("#name").val();
@@ -48,10 +41,7 @@ $(document).ready(function(){
 		sub.noMusic = $("#way").val();
 		sub.type = $("input[name='single_or_group']:checked").val();
 		sub.teamName = $("#team_name").val();
-		sub.teamPeople = parseInt($("#number").val());
-		if (isNaN(sub.teamPeople)) {
-			sub.teamPeople = 1;
-		}
+		sub.teamPeople = $("#number").val();
 		sub.teamInfo = $("#others").val();
 		
 		$.ajax({
