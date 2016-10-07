@@ -51,7 +51,6 @@ $(document).ready(function(){
 							Materialize.updateTextFields();
 						},
 						error: function (XMLHttpRequest, textStatus, errorThrown){    
-								alert("XMLHttpRequest " + XMLHttpRequest[0]);
 						}
 					});							
 				}
@@ -80,7 +79,6 @@ $(document).ready(function(){
 				
 		},
 		error: function (XMLHttpRequest, textStatus, errorThrown){    
-            alert("error:XMLHttpRequest " + XMLHttpRequest[0]);
 		}
 	});
 	

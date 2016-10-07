@@ -5,7 +5,7 @@
     //print(session_id());
     unset($_SESSION['studentID']);
     
-    if (!isset($_POST['studentID'])) {
+    if (!isset($_POST['studentID']) || empty($_POST['studentID'])) {
         die();
     }
 

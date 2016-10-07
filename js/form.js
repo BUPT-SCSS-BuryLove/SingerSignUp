@@ -23,7 +23,6 @@ $(document).ready(function(){
 				}
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){  
-                            alert("请联系我们	XMLHttpRequest " + XMLHttpRequest[0]);
 			}
 		});
 	});
@@ -52,7 +51,6 @@ $(document).ready(function(){
 				}
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){  
-                            alert("请联系我们	XMLHttpRequest " + XMLHttpRequest[0]);
 			}
 		});
 
@@ -94,7 +92,6 @@ $(document).ready(function(){
 				else Materialize.toast("提交失败！", 6000);
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown){    
-				alert("XMLHttpRequest " + XMLHttpRequest[0]);
 			}
 		});
 		e.preventDefault(); // avoid to execute the actual submit of the form.
