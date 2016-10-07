@@ -54,7 +54,7 @@ $(document).ready(function(){
 	$('.modal-trigger').leanModal();
   $("#userfile").ajaxfileupload({
 			action: 'API/file.php',
-			valid_extensions : ['mp3','wav', 'aac', 'flac', 'aep', 'm4a'],
+			valid_extensions : ['mp3','wav', 'aac', 'flac', 'm4a'],
 			onComplete: function(response) {
 				$("#upload-progress").hide();
 				if (response == "Succeeded") {

@@ -12,6 +12,29 @@
         print('Forbidden');
         die();
     }
+
+    if (is_uploaded_file($_FILES['userfile']['tmp_name'])) {
+            $finfo = new finfo(FILEINFO_MIME_TYPE);
+            if (false === $ext = array_search(
+                    $finfo->file($_FILES['userfile']['tmp_name']),
+                    array(
+                        'mp3' => 'audio/mpeg',
+                        'wav' => 'audio/x-wav',
+                        'wav' => 'audio/wav',
+                        'aac' => 'audio/aac',
+                        'm4a' => 'audio/mp4',
+                        'flac'=> 'audio/flac',
+
+                    ),
+                    true
+                )
+            ) {
+                print('Failed');
+                die();
+            }
+    }
+
+
     //print_r($_FILES['userfile']);
     $fileBasename = basename($_FILES['userfile']['name']);
     $filename = '..\\FILE\\'.$fileBasename;
