@@ -16,20 +16,33 @@
         die();
     }
 
-    $stmt = $dbh->prepare("SELECT studentID, pwd FROM `SingerInfo` WHERE studentID = ?");
-    $stmt->execute(array($_POST['studentID']));
-    $row = $stmt->fetch(PDO::FETCH_NAMED);
-
-    if ($row == null || $row['pwd'] == null) {
-        $stmt = $dbh->prepare("INSERT INTO `SingerInfo` (`studentID`) VALUES ( ? )");
+    try {
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dbh->beginTransaction();
+        
+        
+        $stmt = $dbh->prepare("SELECT studentID, pwd FROM `SingerInfo` WHERE studentID = ?");
         $stmt->execute(array($_POST['studentID']));
-        $_SESSION['studentID'] = $_POST['studentID'];
-        print('{"result":"NewUser"}');
-    } else if ($row['pwd'] == $_POST['pwd']) {
-        print('{"result":"Succeeded"}');
-        $_SESSION['studentID'] = $_POST['studentID'];
-    } else {
+        $row = $stmt->fetch(PDO::FETCH_NAMED);
+
+        if ($row == null) {
+            $stmt = $dbh->prepare("INSERT INTO `SingerInfo` (`studentID`) VALUES ( ? )");
+            $stmt->execute(array($_POST['studentID']));
+            $_SESSION['studentID'] = $_POST['studentID'];
+            print('{"result":"NewUser"}');
+        } else if ($row['pwd'] == null) {
+            $_SESSION['studentID'] = $_POST['studentID'];
+            print('{"result":"NewUser"}');
+        } else if ($row['pwd'] == $_POST['pwd']) {
+            print('{"result":"Succeeded"}');
+            $_SESSION['studentID'] = $_POST['studentID'];
+        } else {
+            print('{"result":"Failed"}');
+            unset($_SESSION['studentID']);
+        }
+    } catch (Exception $e) {
+        $dbh->rollBack();
         print('{"result":"Failed"}');
-        unset($_SESSION['studentID']);
+        //print($e->getMessage());
     }
 ?>
