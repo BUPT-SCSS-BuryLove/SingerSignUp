@@ -12,15 +12,6 @@
         print('Forbidden');
         die();
     }
-    if (!isset($_FILES['userfile']['type'])) {
-        print('No File Type');
-        die();
-    }
-    if (strpos($_FILES['userfile']['type'], 'audio')===false) {
-        print("Wrong Type\n");
-        print($_FILES['userfile']['type']);
-        die();
-    }
     $fileBasename = basename($_FILES['userfile']['name']);
     $filename = '../FILE/'.$fileBasename;
 
