@@ -12,8 +12,10 @@
         print('Forbidden');
         die();
     }
+    //print_r($_FILES['userfile']);
     $fileBasename = basename($_FILES['userfile']['name']);
-    $filename = '../FILE/'.$fileBasename;
+    $filename = '..\\FILE\\'.$fileBasename;
+    $filename=iconv("utf-8","gbk",$filename); 
 
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $filename)) {
     } else {

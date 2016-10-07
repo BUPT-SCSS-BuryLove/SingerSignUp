@@ -8,19 +8,29 @@
         die();
     }
 
-    mkdir('../FILE/西土城校区');
+    $dir = '../FILE/西土城校区'; 
+    $filename;
+    mkdir(iconv("utf-8","gbk", $dir));
     foreach($dbh->query('SELECT campus, school, name, file FROM SingerInfo WHERE campus = "西土城校区"') as $row) {
-        copy('../FILE/'.$row['file'], '../FILE/西土城校区/'.$row['campus'].'-'.$row['school'].'-'.$row['name'].'-'.basename($row['file']));
+        $filename = $dir.'/'.$row['campus'].'-'.$row['school'].'-'.$row['name'].'-'.basename($row['file']);
+        $filename = iconv("utf-8","gbk", $filename); 
+        copy(iconv("utf-8","gbk", '../FILE/'.$row['file']), $filename);
     }
     print("西土城文件收集完成\n");
-    mkdir('../FILE/沙河');
+    $dir = '../FILE/沙河';
+    mkdir(iconv("utf-8","gbk", $dir));
     foreach($dbh->query('SELECT campus, school, name, file FROM SingerInfo WHERE campus = "沙河校区"') as $row) {
-        copy('../FILE/'.$row['file'], '../FILE/沙河/'.$row['campus'].'-'.$row['school'].'-'.$row['name'].'-'.basename($row['file']));
+        $filename = $dir.'/'.$row['campus'].'-'.$row['school'].'-'.$row['name'].'-'.basename($row['file']);
+        $filename = iconv("utf-8","gbk", $filename); 
+        copy(iconv("utf-8","gbk", '../FILE/'.$row['file']), $filename);
     }
     print("沙河文件收集完成\n");
-    mkdir('../FILE/宏福');
+    $dir = '../FILE/宏福';
+    mkdir(iconv("utf-8","gbk", $dir));
     foreach($dbh->query('SELECT campus, school, name, file FROM SingerInfo WHERE campus = "宏福校区"') as $row) {
-        copy('../FILE/'.$row['file'], '../FILE/宏福/'.$row['campus'].'-'.$row['school'].'-'.$row['name'].'-'.basename($row['file']));
+        $filename = $dir.'/'.$row['campus'].'-'.$row['school'].'-'.$row['name'].'-'.basename($row['file']);
+        $filename = iconv("utf-8","gbk", $filename); 
+        copy(iconv("utf-8","gbk", '../FILE/'.$row['file']), $filename);
     }
     print("宏富文件收集完成\n");
 ?>
