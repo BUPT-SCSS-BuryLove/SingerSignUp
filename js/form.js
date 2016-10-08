@@ -60,6 +60,10 @@ $(document).ready(function(){
 		sub.studentID = $("#buptid").val();
 		if ($("#password").val() != "") {
 			sub.pwd = hex_md5(b64_md5(hex_md5($("#password").val())));
+		} else {
+			Materialize.toast("请填写密码", 6000);
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+			return;
 		}
 		sub.campus = $("#campus").val();
 		sub.school = $("#school").val();

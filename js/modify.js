@@ -141,7 +141,7 @@ $(document).ready(function(){
 	});
 	$("input[name='single_or_group']").change(function(){
 		var sub = new Object;
-		sub.type = $("input[name='single_or_group'][checked]").val();
+		sub.type = $("input[name='single_or_group']:checked").val();
 		$.ajax({
 			data:sub
 		});
